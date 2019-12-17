@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4dd7e2a-5494-48e9-8517-0233d1040366" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostPreview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_bootstrap-overrides.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_login.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_resume-item.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/authHoc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/authenticate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="d4dd7e2a-5494-48e9-8517-0233d1040366" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,12 +90,26 @@
       <workItem from="1576378510318" duration="207000" />
       <workItem from="1576378738358" duration="1388000" />
       <workItem from="1576463661424" duration="6834000" />
-      <workItem from="1576544667319" duration="17763000" />
+      <workItem from="1576544667319" duration="18148000" />
     </task>
+    <task id="LOCAL-00001" summary="i add login , create post , create user">
+      <created>1576566246149</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576566246149</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="i add login , create post , create user" />
+    <option name="LAST_COMMIT_MESSAGE" value="i add login , create post , create user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="64" key="#ESLint" timestamp="1576562209623">
@@ -141,6 +124,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576469381999" />
+    <state x="221" y="0" key="CommitChangelistDialog2" timestamp="1576566245738">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="221" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576566245738" />
+    <state x="281" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576566442123">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="281" y="99" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1576566442123" />
     <state x="300" y="231" key="com.intellij.ide.util.TipDialog" timestamp="1576378744883">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
