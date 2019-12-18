@@ -112,6 +112,7 @@ function Post({history}) {
                                                  content={post.content}
                                                  cover={post.cover}
                                                  key={post._id}
+                                                 remove
                                     />
                                 ))
                             }
