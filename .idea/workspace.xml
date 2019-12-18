@@ -181,18 +181,22 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576469381999" />
-    <state x="221" y="0" key="CommitChangelistDialog2" timestamp="1576637560256">
+    <state x="221" y="0" key="CommitChangelistDialog2" timestamp="1576639116680">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="221" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576637560256" />
+    <state x="221" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576639116680" />
+    <state x="169" y="32" key="DiffContextDialog" timestamp="1576639124062">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="169" y="32" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1576639124062" />
     <state x="503" y="300" key="Github.ShareDialog" timestamp="1576631268749">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="503" y="300" key="Github.ShareDialog/0.0.1280.800@0.0.1280.800" timestamp="1576631268749" />
-    <state x="281" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576637563106">
+    <state x="281" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576639125725">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="281" y="99" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1576637563106" />
+    <state x="281" y="99" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1576639125725" />
     <state x="300" y="247" key="com.intellij.ide.util.TipDialog" timestamp="1576630797738">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
