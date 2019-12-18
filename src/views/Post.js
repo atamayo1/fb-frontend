@@ -7,6 +7,7 @@ import PostPreview from "../components/PostPreview";
 import useForm from '../hooks/useForm';
 import Input from '../common/Input';
 import authHoc from "../utils/authHoc";
+import authenticate from "../utils/authenticate";
 
 const CREATE_POST = gql`
     mutation createPost($data:PostInput!){
@@ -32,6 +33,7 @@ function Post({history}) {
     const [ sendPost ] = useMutation(CREATE_POST);
     const [cover, setCover] = useState('');
     const [coverPreview, setCoverPreview] = useState('');
+    const { isAuthenticated } = authenticate();
 
     const catchCover = event =>{
         const reader = new FileReader();
@@ -60,7 +62,9 @@ function Post({history}) {
     if(loading) return <h2>Cargando...</h2>;
     if(error) return <h2>Hubo un error :(</h2>;
     return(
-        <>
+     <>
+            {
+                isAuthenticated ? (
             <Layout>
                 <main className="container-fluid p-0">
                     <section className="row">
@@ -120,7 +124,9 @@ function Post({history}) {
                     </section>
                 </main>
             </Layout>
-        </>);
+
+                ): (<><h1>Cargando...</h1></>)}
+                </>);
 }
 
 export default authHoc(Post);
