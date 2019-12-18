@@ -26,7 +26,7 @@ function Navbar(props){
                         <Link className="nav-link" to="/post">Posts</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to={`Logout`}>Log out</Link>
+                        <Link className="nav-link" to={`/logout`}>Log out</Link>
                     </li>
                 </ul>
             </div>

@@ -62,7 +62,7 @@ function Update({match, history}){
         debugger;
 
 
-        if (data) history.push('/');
+        if (data) history.push('');
         if (errors) alert(errors);
     };
 
@@ -72,7 +72,7 @@ function Update({match, history}){
         handleSubmit
     } = useForm(catchData, data);
 
-    if (loading) return <h1>¡Cargando!</h1>
+    if (loading) return <h1>¡Cargando!</h1>;
 
     return(
         <>
