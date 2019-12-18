@@ -46,7 +46,7 @@ function Post({history}) {
     };
     const catchData = async (inputs) => {
         const { data, errors} = await sendPost({variables:{data:{...inputs,cover}}});
-        if (data) history.push('');
+        if (data) history.push('/post');
         if(errors) alert(errors);
     };
 

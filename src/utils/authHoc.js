@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import authenticate from './authenticate';
 
 export default function authHoc(WrappedComponent){
@@ -7,7 +7,7 @@ export default function authHoc(WrappedComponent){
     return function(props){
         return isAuthenticated
             ? < WrappedComponent {...props}/>
-            : <Redirect to={`Post`}/>
+            : <Redirect to={`/post`}/>
     }
 }
 

@@ -20,7 +20,7 @@ function Home({history}) {
         const {data, errors} = await sendLogin({variables: { ...inputs}});
         if(data) {
             const { login } = data;
-            sessionStorage.setItem('fbToken', login.token);
+            sessionStorage.setItem('blogToken', login.token);
             history.push('/post');
         }
         if (errors) alert(`Error with your login: ${errors}`);
@@ -65,7 +65,7 @@ function Home({history}) {
                        <input type="submit" className="btnSubmit" value="Sign in"/>
                    </div>
                    <div className="form-group">
-                       <Link to={`Register`} className="btnRegister">Register</Link>
+                       <Link to={`/register`} className="btnRegister">Register</Link>
                    </div>
                    </form>
                </div>

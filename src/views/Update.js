@@ -58,11 +58,11 @@ function Update({match, history}){
                 ...inputs,
             };
         debugger;
-        const { data, errors} = await sendPost({variables:{ id:match.params.id, data:newData }});
+        const { data, errors} = await sendPost({variables:{id:match.params.id,data:newData }});
         debugger;
 
 
-        if (data) history.push('/post');
+        if (data) history.push('/');
         if (errors) alert(errors);
     };
 
@@ -72,7 +72,7 @@ function Update({match, history}){
         handleSubmit
     } = useForm(catchData, data);
 
-    if (loading) return <h1>¡Cargando!</h1>;
+    if (loading) return <h1>¡Cargando!</h1>
 
     return(
         <>

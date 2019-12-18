@@ -106,7 +106,7 @@ function Register({history}) {
                         </div>
                     </form>
                     <div className="form-group">
-                        <Link to={``} className="btnLogin">Login</Link>
+                        <Link to={`/`} className="btnLogin">Login</Link>
                     </div>
                 </div>
             </div>

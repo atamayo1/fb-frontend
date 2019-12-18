@@ -10,7 +10,7 @@ const httpLink = createUploadLink({
 });
 
 const authLink = setContext((_,{ headers }) => {
-    const token = localStorage.getItem('fbToken');
+    const token = localStorage.getItem('blogToken');
     const context  = {
         headers: {
             ...headers,

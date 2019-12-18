@@ -6,7 +6,7 @@ function PostPreview({_id,title,content, cover}){
     return (
         <Card className="border-0 bg-primary p-5 mw-100 mb-3">
             <div>
-                <Link to={`/post/${_id}`} >
+                <Link to={`/update/${_id}`} >
                     <h3 className="text-white">
                         {title}
                     </h3>

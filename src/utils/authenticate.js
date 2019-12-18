@@ -1,5 +1,5 @@
 export default function () {
-    const token = sessionStorage.getItem('fbToken');
+    const token = sessionStorage.getItem('blogToken');
 
     if(token) {
         const baseUri = token.split('.')[1];
