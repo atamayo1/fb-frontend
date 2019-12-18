@@ -5,12 +5,14 @@ import Post from './views/Post';
 import Register from './views/Register';
 import Logout from "./components/Logout";
 import Update from "./views/Update";
+import Detail from "./views/Detail";
 
 function Routes(){
     return (<>
        <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/post" component={Post} />
+        <Route exact path="/detail/:id" component={Detail} />
        <Route exact path="/update/:id" component={Update} />
         <Route exact path="/logout" component={Logout}/>
     </>);

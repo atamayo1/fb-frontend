@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import { useMutation } from 'react-apollo-hooks';
 import gql from 'graphql-tag';
 import Input from '../common/Input';

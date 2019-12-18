@@ -24,7 +24,7 @@ const GET_POST = gql `
     }
 `;
 // post/:id match.params.id
-function Update({match, history}){
+function Detail({match, history}){
 
     const [ sendPost ] = useMutation(UPDATE_POST);
     const [cover, setCover] = useState('');
@@ -62,32 +62,33 @@ function Update({match, history}){
         debugger;
 
 
-        if (data) history.push('/post');
+        if (data) history.push('');
         if (errors) alert(errors);
     };
 
     const {
         inputs,
         handleInputChange,
-        handleSubmit
     } = useForm(catchData, data);
 
     if (loading) return <h1>¡Cargando!</h1>;
 
     return(
         <>
-            <Layout>
+            <Layout head="Actualiza o modifica tu post."
+                    subhead=":D">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-10 mx-auto">
-                            <form onSubmit={handleSubmit}>
+                            <form>
                                 <Input
                                     name = "title"
                                     label = "Title"
                                     type = "text"
                                     placeholder = "Title Post"
                                     value={inputs.title}
-                                    change={handleInputChange}
+                                    disabled
+                                    onChange={handleInputChange}
                                 />
                                 <div className="control-group">
                                     <div className="form-group floating-label-form-group controls">
@@ -95,6 +96,7 @@ function Update({match, history}){
                                         <textarea cols="30" rows="10" className="form-control"
                                                   placeholder="Content"
                                                   name="content"
+                                                  disabled
                                                   onChange={handleInputChange}
                                                   value={inputs.content}
                                         />
@@ -105,8 +107,9 @@ function Update({match, history}){
                                     name = "cover"
                                     label = "Cover "
                                     type = "file"
+                                    disabled
                                     placeholder = "Select file"
-                                    change={catchCover}
+                                    onChange={catchCover}
                                 />
                                 {
                                     data.getSinglePost.cover ?
@@ -117,9 +120,6 @@ function Update({match, history}){
                                 }
 
                                 <img src={coverPreview} alt="" className="b-block w-50"/>
-                                <div className="clearfix mt-4">
-                                    <button type="submit" className="btn btn-primary" >Update Post</button>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -129,4 +129,4 @@ function Update({match, history}){
     );
 };
 
-export default authHoc(Update);
+export default authHoc(Detail);

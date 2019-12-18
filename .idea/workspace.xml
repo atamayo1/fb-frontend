@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4dd7e2a-5494-48e9-8517-0233d1040366" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostPreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostPreview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +101,7 @@
       <workItem from="1576378738358" duration="1388000" />
       <workItem from="1576463661424" duration="6834000" />
       <workItem from="1576544667319" duration="18556000" />
-      <workItem from="1576630797171" duration="12009000" />
+      <workItem from="1576630797171" duration="15543000" />
     </task>
     <task id="LOCAL-00001" summary="i add login , create post , create user">
       <created>1576566246149</created>
@@ -154,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576639180861</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="i add authenticate in post.js">
+      <created>1576644867090</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576644867090</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +193,8 @@
     <MESSAGE value="i fix the routes" />
     <MESSAGE value="i add delete post" />
     <MESSAGE value="i add if is authenticated can delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="i add if is authenticated can delete" />
+    <MESSAGE value="i add authenticate in post.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="i add authenticate in post.js" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="64" key="#ESLint" timestamp="1576562209623">
@@ -196,10 +209,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576469381999" />
-    <state x="221" y="0" key="CommitChangelistDialog2" timestamp="1576639180680">
+    <state x="221" y="0" key="CommitChangelistDialog2" timestamp="1576644866784">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="221" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576639180680" />
+    <state x="221" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576644866784" />
     <state x="169" y="32" key="DiffContextDialog" timestamp="1576639124062">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -208,17 +221,17 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="503" y="300" key="Github.ShareDialog/0.0.1280.800@0.0.1280.800" timestamp="1576631268749" />
-    <state x="281" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576639189227">
+    <state x="281" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576644872422">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="281" y="99" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1576639189227" />
+    <state x="281" y="99" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1576644872422" />
     <state x="300" y="247" key="com.intellij.ide.util.TipDialog" timestamp="1576630797738">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="300" y="247" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1576630797738" />
-    <state x="305" y="185" key="run.anything.popup" timestamp="1576632182379">
+    <state x="305" y="185" key="run.anything.popup" timestamp="1576647599423">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="185" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1576632182379" />
+    <state x="305" y="185" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1576647599423" />
   </component>
 </project>

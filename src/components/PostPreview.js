@@ -11,14 +11,14 @@ const DELETE_POST = gql`
     }
 `;
 
-function PostPreview({_id, title, content, cover, remove}){
+function PostPreview({_id, title, content, cover, edit, remove}){
     const [deletePost] = useMutation(DELETE_POST);
     const { isAuthenticated } = authenticate();
 
     return (
         <Card className="border-0 bg-primary p-5 mw-100 mb-3">
             <div>
-                <Link to={`/update/${_id}`} >
+                <Link to={`/detail/${_id}`} >
                     <h3 className="text-white">
                         {title}
                     </h3>
@@ -32,7 +32,10 @@ function PostPreview({_id, title, content, cover, remove}){
                 <p>
                     {
                         isAuthenticated ? (
-                            <p>
+                            <p className="d-flex justify-content-between">
+                                {
+                                    edit ? <Link class="btn btn-warning" to={`/update/${_id}`}>Editar</Link>: <></>
+                                }
                                 {
                                     remove ? <button className="btn btn-danger" onClick={ () => {
                                         deletePost({variables:{id:_id}}).then(() => {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../common/Layout';
+import {Link, Redirect} from 'react-router-dom';
 import { useMutation } from 'react-apollo-hooks';
 import gql from "graphql-tag";
 import { useQuery } from 'react-apollo-hooks';
@@ -47,8 +48,8 @@ function Post({history}) {
         reader.readAsDataURL(file);
     };
     const catchData = async (inputs) => {
-        const { data, errors} = await sendPost({variables:{data:{...inputs,cover}}});
-        if (data) history.push('/post');
+        const { errors } = await sendPost({variables:{data:{...inputs,cover}}});
+        if(data) history.push(data);
         if(errors) alert(errors);
     };
 
@@ -63,8 +64,7 @@ function Post({history}) {
     if(error) return <h2>Hubo un error :(</h2>;
     return(
      <>
-            {
-                isAuthenticated ? (
+
             <Layout>
                 <main className="container-fluid p-0">
                     <section className="row">
@@ -102,7 +102,15 @@ function Post({history}) {
                                 />
                                 <img src={coverPreview} alt="cover" className="b-block w-50"/>
                                 <div className="mt-4">
-                                    <button type="submit" className="btn btn-primary">Crear Post</button>
+                                    {
+                                        isAuthenticated ? (
+                                            <button type="submit" className="btn btn-primary">Crear Post</button>
+                                        ): (<>
+                                            <Link to={``}>
+                                            <button type="submit" className="btn btn-primary">Crear Post</button>
+                                            </Link>
+                                        </>)}
+
                                 </div>
                             </form>
                         </div>
@@ -116,6 +124,7 @@ function Post({history}) {
                                                  content={post.content}
                                                  cover={post.cover}
                                                  key={post._id}
+                                                 edit
                                                  remove
                                     />
                                 ))
@@ -125,7 +134,7 @@ function Post({history}) {
                 </main>
             </Layout>
 
-                ): (<><h1>Cargando...</h1></>)}
+
                 </>);
 }
 

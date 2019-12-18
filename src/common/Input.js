@@ -13,7 +13,7 @@ function Input({label,type,placeholder,change,value,required,name}){
                     className="form-control"
                     placeholder={placeholder}
                     required={required}/>
-                <p className="help-block text-danger"></p>
+                <p className="help-block text-danger"/>
             </div>
         </div>
     );

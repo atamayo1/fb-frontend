@@ -12,7 +12,9 @@ function useForm(callback, current= {}){
 
     const handleSubmit = event => {
         if (event) event.preventDefault();
-        callback(inputs);
+        callback(inputs).then(() => {
+                window.location.reload();
+        });
     };
 
     const handleInputChange = event => {
