@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {Card} from "reactstrap";
 import { useMutation } from 'react-apollo-hooks';
 import gql from 'graphql-tag';
+import authenticate from '../utils/authenticate';
 
 const DELETE_POST = gql`
     mutation deletePost($id:ID!){
@@ -10,8 +11,10 @@ const DELETE_POST = gql`
     }
 `;
 
-function PostPreview({_id,title,content, cover, remove}){
+function PostPreview({_id, title, content, cover, remove}){
     const [deletePost] = useMutation(DELETE_POST);
+    const { isAuthenticated } = authenticate();
+
     return (
         <Card className="border-0 bg-primary p-5 mw-100 mb-3">
             <div>
@@ -28,11 +31,17 @@ function PostPreview({_id,title,content, cover, remove}){
                 </Link>
                 <p>
                     {
-                        remove ? <button className="btn btn-danger" onClick={ () => {
-                            deletePost({variables:{id:_id}}).then(() => {
-                                window.location.reload();
-                            })}
-                        }>Borrar Post</button>:<></>}
+                        isAuthenticated ? (
+                            <p>
+                                {
+                                    remove ? <button className="btn btn-danger" onClick={ () => {
+                                        deletePost({variables:{id:_id}}).then(() => {
+                                            window.location.reload();
+                                        })}
+                                    }>Borrar Post</button>:<></>}
+                            </p>
+                        ) : (<></>)
+                    }
                 </p>
             </div>
         </Card>
