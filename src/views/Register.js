@@ -25,7 +25,7 @@ function Register({history}) {
             const { data } = await sendSignup({variables:{data:{...inputs}}});
             if(data){
                 if(data.errors) console.log(data.errors);
-                history.push('/post');
+                history.push('/');
             }
         } else {
             alert('Your password does not match');
@@ -106,7 +106,7 @@ function Register({history}) {
                         </div>
                     </form>
                     <div className="form-group">
-                        <Link to={``} className="btnLogin">Login</Link>
+                        <Link to={`/login`} className="btnLogin">Login</Link>
                     </div>
                 </div>
             </div>

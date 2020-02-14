@@ -21,7 +21,7 @@ function Home({history}) {
         if(data) {
             const { login } = data;
             sessionStorage.setItem('blogToken', login.token);
-            history.push('/post');
+            history.push('/');
         }
         if (errors) alert(`Error with your login: ${errors}`);
     };

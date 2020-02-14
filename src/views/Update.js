@@ -5,11 +5,13 @@ import Layout from './../common/Layout';
 import Input from '../common/Input';
 import useForm from '../hooks/useForm';
 import authHoc from "../utils/authHoc";
+import {Link} from "react-router-dom";
+import authenticate from "../utils/authenticate";
 
 const UPDATE_POST = gql`
-    mutation updatePost($id:ID!,$data:PostUpdateInput!){
-        updateOnePost(id:$id,data:$data){
-            _id,
+    mutation updatePost($id: ID!, $data:PostInputUpdate!){
+        updateOnePost(id: $id, data:$data){
+            _id
         }
     }
 `;
@@ -29,6 +31,7 @@ function Update({match, history}){
     const [ sendPost ] = useMutation(UPDATE_POST);
     const [cover, setCover] = useState('');
     const [coverPreview, setCoverPreview] = useState('');
+    const { isAuthenticated } = authenticate();
 
     const { data, loading } = useQuery(GET_POST, {
         variables: {
@@ -57,12 +60,9 @@ function Update({match, history}){
             {
                 ...inputs,
             };
-        debugger;
-        const { data, errors} = await sendPost({variables:{id:match.params.id,data:newData }});
-        debugger;
+        const { data, errors} = await sendPost({ variables:{ id:match.params.id, data:newData } });
 
-
-        if (data) history.push('/post');
+        if (data) history.push('/');
         if (errors) alert(errors);
     };
 
@@ -78,6 +78,7 @@ function Update({match, history}){
         <>
             <Layout>
                 <div className="container">
+                    <h2>Edit</h2>
                     <div className="row">
                         <div className="col-lg-8 col-md-10 mx-auto">
                             <form onSubmit={handleSubmit}>
@@ -118,7 +119,14 @@ function Update({match, history}){
 
                                 <img src={coverPreview} alt="" className="b-block w-50"/>
                                 <div className="clearfix mt-4">
-                                    <button type="submit" className="btn btn-primary" >Update Post</button>
+                                    { isAuthenticated ? (
+                                        <button type="submit" className="btn btn-primary" >Update Post</button>
+                                        ): (<>
+                                        <Link to={`/login`}>
+                                            <button type="submit" className="btn btn-primary" >Update Post</button>
+                                        </Link>
+                                    </>)
+                                    }
                                 </div>
                             </form>
                         </div>

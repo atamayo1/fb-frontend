@@ -9,7 +9,7 @@ import authHoc from "../utils/authHoc";
 const UPDATE_POST = gql`
     mutation updatePost($id:ID!,$data:PostUpdateInput!){
         updateOnePost(id:$id,data:$data){
-            _id,
+            _id
         }
     }
 `;
@@ -78,6 +78,7 @@ function Detail({match, history}){
             <Layout head="Actualiza o modifica tu post."
                     subhead=":D">
                 <div className="container">
+                    <h2>Detail</h2>
                     <div className="row">
                         <div className="col-lg-8 col-md-10 mx-auto">
                             <form>

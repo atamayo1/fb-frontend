@@ -13,7 +13,9 @@ import authenticate from "../utils/authenticate";
 const CREATE_POST = gql`
     mutation createPost($data:PostInput!){
         createNewPost(data:$data){
-            _id,
+            _id
+            title
+            content
         }
     }
 `;
@@ -48,9 +50,11 @@ function Post({history}) {
         reader.readAsDataURL(file);
     };
     const catchData = async (inputs) => {
-        const { errors } = await sendPost({variables:{data:{...inputs,cover}}});
-        if(data) history.push(data);
-        if(errors) alert(errors);
+        const { data } = await sendPost({variables:{data:{...inputs,cover}}});
+        if(data){
+            if(data.errors) alert(data.errors);
+            history.push('/');
+        }
     };
 
     const {
@@ -59,7 +63,7 @@ function Post({history}) {
         handleSubmit
     } = useForm(catchData);
 
-    const { data, loading, error} = useQuery(ALL_POST);
+    const { data, loading, error } = useQuery(ALL_POST);
     if(loading) return <h2>Cargando...</h2>;
     if(error) return <h2>Hubo un error :(</h2>;
     return(
@@ -106,11 +110,11 @@ function Post({history}) {
                                         isAuthenticated ? (
                                             <button type="submit" className="btn btn-primary">Crear Post</button>
                                         ): (<>
-                                            <Link to={``}>
+                                            <Link to={`/login`}>
                                             <button type="submit" className="btn btn-primary">Crear Post</button>
                                             </Link>
-                                        </>)}
-
+                                        </>)
+                                    }
                                 </div>
                             </form>
                         </div>

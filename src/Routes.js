@@ -9,9 +9,9 @@ import Detail from "./views/Detail";
 
 function Routes(){
     return (<>
-       <Route exact path="/" component={Home} />
+       <Route exact path="/login" component={Home} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/post" component={Post} />
+        <Route exact path="/" component={Post} />
         <Route exact path="/detail/:id" component={Detail} />
        <Route exact path="/update/:id" component={Update} />
         <Route exact path="/logout" component={Logout}/>

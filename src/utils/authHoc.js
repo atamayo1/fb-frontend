@@ -7,7 +7,7 @@ export default function authHoc(WrappedComponent){
     return function(props){
         return isAuthenticated
             ? < WrappedComponent {...props}/>
-            : <Redirect to={`/post`}/>
+            : <Redirect to={`/login`}/>
     }
 }
 
